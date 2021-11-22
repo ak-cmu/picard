@@ -30,9 +30,12 @@ from seq2seq.utils.dataset import DataTrainingArguments, DataArguments
 from seq2seq.utils.dataset_loader import load_dataset
 from seq2seq.utils.spider import SpiderTrainer
 from seq2seq.utils.cosql import CoSQLTrainer
+import torch
 
 
 def main() -> None:
+    print("I'm PRINTING")
+    print(torch.cuda.is_available())
     # See all possible arguments by passing the --help flag to this script.
     parser = HfArgumentParser(
         (PicardArguments, ModelArguments, DataArguments, DataTrainingArguments, Seq2SeqTrainingArguments)
